@@ -33,7 +33,7 @@ Das Projekt beinhaltet einen Sauerstoff Sensor, der den momentanen Sauerstoffgeh
 	•	1 MKR 1010 Arduino-Chip
 	•	1 LC-Display Grove-LCD RGB Backlight
 	•	1 BME680 Sauerstoffsensor
-	•	1 Servomotor: HD-1440A)
+	•	1 Servomotor: (HD-1440A)
 	
 In der Arduino IDE wird das Modul MKR 1010 ausgewählt
 Der O2-Sensor ist für normale Luft nicht genau. Die Empfindlichkeit wird durch den RGain-Widerstand bestimmt. Dieser Sensor kann jedoch erkennen, wenn er sich in einem mit Sauerstoff gefüllten Raum befindet.
