@@ -1,26 +1,26 @@
 # Projekt Sauerstoffsensor mit LC-Display und Servomotor
--
+
 ## Use-Case
 
-Inhaltsverzeichnis
-Definition	
-Beschreibung	
-Teile	
-In-Funktions-setzung	
-Use-Cases	
-Blockschaltbild	
-Dokumentation	
-Einführung und Vorbereitung	
-Implementierung	
-Gassensor mit LCD	
-BME 680	
-HD-1440A	
-Testergebnisse	
-Ping-Test Ergebnisse	
-BME 680 Sauerstoffsensor Testergebnisse	
-HD-1440A Servomotor Testergebnisse	
-Fazit	
-Reflexion	
+- Inhaltsverzeichnis
+- Definition	
+- Beschreibung	
+- Teile	
+- In-Funktions-setzung	
+- Use-Cases	
+- Blockschaltbild	
+- Dokumentation	
+- Einführung und Vorbereitung	
+- Implementierung	
+- Gassensor mit LCD	
+- BME 680	
+- HD-1440A	
+- Testergebnisse	
+- Ping-Test Ergebnisse	
+- BME 680 Sauerstoffsensor Testergebnisse	
+- HD-1440A Servomotor Testergebnisse	
+- Fazit	
+	
 
 ## Definition
 
@@ -43,47 +43,47 @@ Sobald der Chip eingesteckt ist und das Programm auf den Arduino-Chip hochgelade
 
 ### Use-Cases
 
-Name	                        Display
-Akteur	                      Prüfer
-Trigger	                      Display
-Kurzbeschreibung	            Sauerstoff Abfrage
-Vorbedingungen	              Display muss eingeschaltet sein und den Chip über ein Modul ansteuerbar.
+	Name:	                      - Display
+	Akteur:	                      - Prüfer
+	Trigger:	              - Display
+	Kurzbeschreibung:	      - Sauerstoff Abfrage
+	Vorbedingungen:	              - Display muss eingeschaltet sein und den Chip über ein Modul ansteuerbar.
 
 	
-Komponenten	                  LCD-Anzeige, Schaltplatine und Sauerstoffsensor. 
-Essenzielle Schritte	        1. Intention der Systemumgebung	Reaktion des Systems
-	                            2. LCD-Anzeige einschalten.	Aufleuchten des Bildschirms
-	                            3. Anwählen des Moduls	Auswahl Modul
-	                            4. Anzeigen des Sauerstoffgehalts	Sauerstoffgehalt wird abgefragt.
+	Komponenten:	              - LCD-Anzeige, Schaltplatine und Sauerstoffsensor. 
+	Essenzielle Schritte:	      - 1. Intention der Systemumgebung	Reaktion des Systems
+		                      - 2. LCD-Anzeige einschalten.	Aufleuchten des Bildschirms
+	        	              - 3. Anwählen des Moduls	Auswahl Modul
+	                	      - 4. Anzeigen des Sauerstoffgehalts	Sauerstoffgehalt wird abgefragt.
                               
-Ausnahmefälle	                Fehler Module.	
-Nachbedingung	                Keine	
-Zeitverhalten	                Instantan	
-Verfügbarkeit	                Immer (Bei Stromanschluss)	
-Fragen, Kommentare	          Keine	
+	Ausnahmefälle:	      	      - Fehler Module.	
+	Nachbedingung:	              - Keine	
+	Zeitverhalten:	              - Instantan	
+	Verfügbarkeit:	              - Immer (Bei Stromanschluss)	
+	Fragen, Kommentare:           - Keine	
 
 
 
 
 
-Name	                        Fensteröffnung
-Akteur	                      System
-Trigger	                      Sauerstoffgehalt übersteigt vordefinierten Wert
-Kurzbeschreibung	            Fensterhebel Öffnung
-Vorbedingungen	              Display muss eingeschaltet sein und Fensterhebel über Chipmodul ansteuerbar.
+	Name	                      	- Fensteröffnung
+	Akteur	                      	- System
+	Trigger	                      	- Sauerstoffgehalt übersteigt vordefinierten Wert
+	Kurzbeschreibung	      	- Fensterhebel Öffnung
+	Vorbedingungen	              	- Display muss eingeschaltet sein und Fensterhebel über Chipmodul ansteuerbar.
 
 	
-Komponenten	                  LCD-Anzeige, Schaltplatine, Fensterhebel und Sauerstoffsensor. 
-Essenzielle Schritte	        1. Intention der Systemumgebung	Reaktion des Systems
-	                            2. LCD-Anzeige einschalten.	Aufleuchten des Bildschirms
-                              3. Anzeigen des Sauerstoffgehalts	Sauerstoffgehalt wird abgefragt.
-	                            4. Sauerstoffgehalt übersteigt vordefinierten Wert 	Fensterhebel wird betätigt.
+	Komponenten	              	- LCD-Anzeige, Schaltplatine, Fensterhebel und Sauerstoffsensor. 
+	Essenzielle Schritte	      	- 1. Intention der Systemumgebung	Reaktion des Systems
+	                            	- 2. LCD-Anzeige einschalten.	Aufleuchten des Bildschirms
+                              		- 3. Anzeigen des Sauerstoffgehalts	Sauerstoffgehalt wird abgefragt.
+	                            	- 4. Sauerstoffgehalt übersteigt vordefinierten Wert 	Fensterhebel wird betätigt.
                               
-Ausnahmefälle	                Fehler oder Blockade des Hebels.	
-Nachbedingung	                Keine	
-Zeitverhalten	                Instantan	
-Verfügbarkeit	                Beim Systemzustand über vorgegebenen Wert (Bei Stromanschluss)	
-Fragen, Kommentare	          Keine	
+	Ausnahmefälle	                - Fehler oder Blockade des Hebels.	
+	Nachbedingung	                - Keine	
+	Zeitverhalten	                - Instantan	
+	Verfügbarkeit	                - Beim Systemzustand über vorgegebenen Wert (Bei Stromanschluss)	
+	Fragen, Kommentare	       	- Keine	
 
  
 ![grafik](https://user-images.githubusercontent.com/56382532/174975333-3866270e-68a5-4081-972b-1ad78c062ffe.png)
@@ -107,9 +107,9 @@ Fragen, Kommentare	          Keine
 ### Blockschaltbild
 
 -	Sauerstoffsensor	BME 680
--	Servomotor 	      HD-1440A
--	LC-Display	      Grove-LCD RGB Backlight
--	WiFi	            Arduino MKR1010 WiFi Modul 
+-	Servomotor 	      	HD-1440A
+-	LC-Display	      	Grove-LCD RGB Backlight
+-	WiFi	            	Arduino MKR1010 WiFi Modul 
 
 ![grafik](https://user-images.githubusercontent.com/56382532/174975446-ed788f3e-5546-4ec7-97d9-2371f0c9a3f3.png)
 
