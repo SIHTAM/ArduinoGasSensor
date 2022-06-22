@@ -62,7 +62,7 @@ Sobald der Chip eingesteckt ist und das Programm auf den Arduino-Chip hochgelade
 	Verfügbarkeit:	              - Immer (Bei Stromanschluss)	
 	Fragen, Kommentare:           - Keine	
 
-
+------------------------------------------------------------------------------------------------------------------------------
 
 
 
