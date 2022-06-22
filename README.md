@@ -144,23 +144,23 @@ Der Port werden mittels der I2 C Schnittstelle angesteuert, um Signalkonflikte z
 
 ### Servomotor Programmcode
 
-	Servo myservo;  							- // Servo-Objekt erstellen, um ein Servomotor zu steuern
+	Servo myservo;  							// Servo-Objekt erstellen, um ein Servomotor zu steuern
 
-	int pos = 0;    							- // Variable zur Speicherung der Servoposition
+	int pos = 0;    							// Variable zur Speicherung der Servoposition
 
 	void setup_servo() {
- 	 myservo.attach(3);  							- // Befestigt das Servo an Pin 3 am Servoobjekt
+ 	 myservo.attach(3);  							// Befestigt das Servo an Pin 3 am Servoobjekt
 	}
 
 	void loop_servo (){
  	 if (ppms[array_len] > 500) {
- 	 for (pos = 0; pos <= 180; pos += 1) { 					- //geht von 0 Grad auf 180 Grad (in 1 Grad Schritte)
-   	 myservo.write(pos);              					- // Servomotor in der variablen 'POS' positioniert
-    	delay(15);                       					- // wartet 15 ms, bis das Servo die Position erreicht hat
+ 	 for (pos = 0; pos <= 180; pos += 1) { 					//geht von 0 Grad auf 180 Grad (in 1 Grad Schritte)
+   	 myservo.write(pos);              					// Servomotor in der variablen 'POS' positioniert
+    	delay(15);                       					// wartet 15 ms, bis das Servo die Position erreicht hat
  	 }
   	for (pos = 180; pos >= 0; pos -= 1) { geht von 180 Grad auf 0 Grad
-   	 myservo.write(pos);              					- // Servomotor in der variablen 'POS' positioniert
- 	   delay(15);                       					- // wartet 15 ms, bis das Servo die Position erreicht hat
+   	 myservo.write(pos);              					// Servomotor in der variablen 'POS' positioniert
+ 	   delay(15);                       					// wartet 15 ms, bis das Servo die Position erreicht hat
  	 }
 	}
 	  }
